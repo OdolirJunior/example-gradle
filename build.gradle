@@ -1,0 +1,19 @@
+
+task verificaDiretorio( ){
+    println ("Buscando diretorio");
+    println ("eh um diretorio? ${new File('/tmp/').isFile()}")    
+}
+
+task hello(){
+    doLast{
+        println('hello')
+    }
+}
+
+task afterHello(dependsOn: hello) {
+    doLast {
+        println('after hello')
+    }
+}
+
+
